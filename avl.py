@@ -13,7 +13,6 @@ class No:
         self.esquerda = None
         self.altura = 0
 
-# Códigos ANSI para cores
 class Cores:
     RESET = "\033[0m"
     VERDE = "\033[32m"
@@ -142,18 +141,15 @@ def imprimir(raiz, nivel=0):
 def menu():
     raiz = None
     while True:
-        print(f"\n\n\t{Cores.VERDE}0 - Sair{Cores.RESET}")
-        print(f"\t{Cores.VERDE}1 - Inserir{Cores.RESET}")
+        print(f"\n\n\t{Cores.VERDE}1 - Inserir{Cores.RESET}")
         print(f"\t{Cores.VERDE}2 - Remover{Cores.RESET}")
-        print(f"\t{Cores.VERDE}3 - Imprimir{Cores.RESET}")
+        print(f"\t{Cores.VERDE}3 - Imprimir (A árvore será representada 'deitada' da esquerda para a direita){Cores.RESET}")
         print(f"\t{Cores.VERDE}4 - Pesquisar{Cores.RESET}")
+        print(f"\t{Cores.VERDE}5 - Sair{Cores.RESET}")
 
         opcao = int(input(f"{Cores.AMARELO}Escolha uma opção: {Cores.RESET}"))
 
-        if opcao == 0:
-            print(f"{Cores.VERMELHO}Programa finalizado{Cores.RESET}")
-            break
-        elif opcao == 1:
+        if opcao == 1:
             valor = int(input(f"{Cores.AMARELO}Digite o valor a ser inserido: {Cores.RESET}"))
             raiz = inserir(raiz, valor)
         elif opcao == 2:
@@ -164,8 +160,12 @@ def menu():
         elif opcao == 4:
             valor = int(input(f"{Cores.AMARELO}Digite o valor a ser pesquisado: {Cores.RESET}"))
             pesquisar(raiz, valor)
+        elif opcao == 5:
+            print(f"{Cores.VERMELHO}Programa finalizado{Cores.RESET}")
+            break
         else:
             print(f"{Cores.VERMELHO}\nOpção inválida!{Cores.RESET}")
+
 
 if __name__ == "__main__":
     menu()
