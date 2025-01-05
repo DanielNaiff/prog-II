@@ -1,3 +1,11 @@
+#PROJETO DE ALGORITMO II
+#TRABALHO 1 
+#RUBRO NEGRO
+
+#Alunos:
+#Eduardo Fernandes Albuquerque 202304940031
+#Daniel Naiff da Costa 202304940010
+
 class Node: #Nó
     def __init__(self, valor):
         self.valor = valor
